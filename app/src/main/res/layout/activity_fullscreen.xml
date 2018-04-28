@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <VideoView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/videoView"
+        style="@style/Theme.NoTitle" />
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="20dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_gravity="right|top"
+        android:editable="false"
+        android:enabled="false"
+        android:text="IP: 10.0.1.17"
+        android:textColor="#ffffffff"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="2dp" />
+
+    <TextClock
+        android:layout_width="160dp"
+        android:layout_height="20dp"
+        android:id="@+id/textClock"
+        android:layout_gravity="left|top"
+        android:format12Hour="MMM dd, yyyy hh:mm"
+        android:format24Hour="null" />
+
+    <SurfaceView
+        android:layout_width="335dp"
+        android:layout_height="170dp"
+        android:id="@+id/surfaceView"
+        android:layout_gravity="right|center_vertical"
+        style="@style/Theme.NoTitle" />
+
+</FrameLayout>
